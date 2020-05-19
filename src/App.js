@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-// import logo from "./logo.svg";
+import logo from "./logo.svg";
 import "./App.css";
 import { v4 as uuid } from "uuid";
 import Form from "./Form";
 import MemberCard from "./MemberCard";
+import Headline from "./Headline";
+
 /* <<<<<< MVP ------ TO DO >>>>>>>>>>>>
 //✅declare variable and set an initial value : name email and role... do we need id here?????
 
@@ -38,6 +40,7 @@ function App() {
 
   return (
     <div className='App'>
+      <Headline />
       <Form addnewMember={addnewMember} />
       <MemberCard member={member} />
     </div>

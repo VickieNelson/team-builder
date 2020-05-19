@@ -21,26 +21,45 @@ const Form = (props) => {
   return (
     // create form
     // onSubmit for button on form
-    <form
-      onSubmit={(event) => {
-        event.preventDefault();
-        setMember({ name: "", email: "", role: "" })
-        props.addnewMember(member);
-      }}
-    >
-<label htmlFor = "name">Name:</label>
-<textarea name = "name" placeholder = "Add team member" value = {member.name} onChange = {changeHandler}/>
 
-      <label htmlFor='role'>Role:</label>
-      <textarea
-        name='Role'
-        placeholder='Role'
-        value={member.role}
-        onChange={changeHandler}
-      />
+    <div className='form-container'>
+      <form
+        onSubmit={(event) => {
+          event.preventDefault();
+          setMember({ name: "", email: "", role: "" });
+          props.addnewMember(member);
+        }}
+      >
+        {/* name field */}
+        <label htmlFor='name'>Name:</label>
+        <textarea
+          name='name'
+          placeholder='Add team member'
+          value={member.name}
+          onChange={changeHandler}
+        />
+        {/* email field */}
 
-      <button> Submit </button>
-    </form>
+        <label htmlFor='email'>Email:</label>
+        <textarea
+          name='email'
+          placeholder='Please enter valid email'
+          value={member.email}
+          onChange={changeHandler}
+        />
+
+        {/* Role Dropdown */}
+        <label htmlFor='role'>Role:</label>
+        <textarea
+          name='Role'
+          placeholder='Role'
+          value={member.role}
+          onChange={changeHandler}
+        />
+        {/* submit button */}
+        <button className='btn'> Submit </button>
+      </form>
+    </div>
   );
 };
 
