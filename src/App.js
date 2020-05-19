@@ -4,8 +4,10 @@ import "./App.css";
 import { v4 as uuid } from "uuid";
 
 /* <<<<<< MVP ------ TO DO >>>>>>>>>>>>
-//declare variable and set an initial value : name email and role... do we need id here?????
+//✅declare variable and set an initial value : name email and role... do we need id here?????
+
 //You will have to decide which component is responsible for maintaining the state of the form (Form itself, or its parent App). Each approach has advantages and disadvantages.
+
 //Render your Form component in App. The App component should hand down through props any callback(s) needed for Form to do its job (adding new members to your team members state on submit).
 */
 
@@ -17,6 +19,11 @@ const initialTeamList = [
     role: "TL",
   },
 ];
+
+const initialFormValues = {
+  //text inputs
+  //dropdown
+};
 
 function App() {
   return (
